@@ -1,0 +1,54 @@
+header{
+    backdrop-filter: blur(50px);
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+}
+
+.header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 21px;
+    padding: 21px 0;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    margin-right: 50px; 
+}
+
+.nav-list{
+    display: flex;
+    gap: 25px;
+}
+
+.tel{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.tel-link{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
