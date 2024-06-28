@@ -1,0 +1,46 @@
+.pro-section {
+    padding: 75px 0;
+    background-image: url("../images/pro-bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.pro {
+     @include display($items:center, $space:space-between, $gap:0px);
+}
+
+.pro-item{
+    width: 102px;
+}
+
+.pro__content-wrapper {
+    width: 347px;
+}
+
+.pro__content-wrapper > h2{
+     @include textStyle($FS:38px, $FW:600, $LH:40px, $COLOR:white, $CASE:capitalize, $MB:20px);
+}
+
+.pro__content-wrapper > p{
+     @include textStyle($FS:16px, $FW:400, $LH:19px, $COLOR:white, $CASE:capitalize, $MB:0px);
+}
+.pro-list {
+     @include display($items:start, $space:start, $gap:54px);
+}
+
+.count > strong{
+     @include textStyle($FS:50px, $FW:700, $LH:60px, $COLOR:white, $CASE:capitalize, $MB:15px);
+}
+
+.count > p{
+     @include textStyle($FS:16px, $FW:400, $LH:19px, $COLOR:white, $CASE:capitalize, $MB:0px);
+}
+.count_img-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+     @include display($items:center, $space:center, $gap:0px);
+}

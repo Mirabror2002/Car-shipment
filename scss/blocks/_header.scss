@@ -1,54 +1,46 @@
-header{
-    backdrop-filter: blur(50px);
-    background: rgba(0, 0, 0, 0.3);
+.site-header {
+    padding: 20px 0;
+    background: #0000004d;
     position: fixed;
     width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
-.header-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 21px;
-    padding: 21px 0;
+.header {
+    @include display($items:center, $space:space-between, $gap:0px);
 }
 
-.navigation{
-    display: flex;
-    align-items: center;
+.header__logo-link {
+    display: inline-block;
 }
 
-nav{
-    margin-right: 50px; 
+.navbar {
+    @include display($items:center, $space:none, $gap:50px)
+}
+.navbar__list {
+    @include display($items:center, $space:none, $gap:25px);
 }
 
-.nav-list{
-    display: flex;
-    gap: 25px;
-}
-
-.tel{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.nav-link{
-    color: rgb(255, 255, 255);
+.navbar__link {
     font-size: 16px;
     font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0%;
-    text-align: left;
+    line-height: 19.36px;
+    color: $clr-white;
     text-transform: uppercase;
+    transition: color 0.3s;
+    &:hover{
+        color:$clr-orange;
+    }
 }
-
-.tel-link{
-    color: rgb(255, 255, 255);
+.navbar__phone-number {
+    @include display($items:center, $space:none, $gap:10px);
+    color:$clr-white;
     font-size: 16px;
     font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0%;
-    text-align: left;
-    text-transform: uppercase;
+    line-height: 19.36px;
+    transition: color 0.3s;
+    &:hover{
+        color:$clr-orange;
+    }
 }

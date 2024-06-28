@@ -1,57 +1,54 @@
-.hero-section{
-    height: 100vh;
-    padding: 180px 0 95px;
+.hero-section {
+    padding: 180px 0 93px;
     background-image: url("../images/hero-bg-img.png");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom center;
+    background-attachment: fixed;
 }
+
+.hero {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+
 .hero-wrapper{
-    display: flex;
-    justify-content: space-between;
+    @include display($items:none, $space:space-between, $gap:85px);
 }
 
-.hero-content{
+.hero__form{
+    width: 449px;
+    padding: 8px;
+    background-color: #333;
+}
+
+.hero__content-wrapper {
     width: 576px;
-    margin-top: 45px;
-    margin-left: 50px;
+    padding-top: 43px;
 }
-
-.star-icon{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.hero__top-text {
+    position: relative;
+    @include textStyle($FS:14px, $FW:500, $LH:16px, $COLOR:white, $CASE:uppercase, $MB:11px);
+    padding-left: 34px;
+    
+    &::before{
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background-image: url("../images/hero-star-icon.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 0;
+    }
 }
-
-.hero-text{
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-    letter-spacing: 0px;
-    text-align: left;
-    text-transform: uppercase;
+.hero__title {
+    @include textStyle($FS:56px, $FW:700, $LH:57.76px, $COLOR:white, $CASE:capitalize, $MB:20px);
 }
-
-.hero-title{
-    width: 480px;
-    color: rgb(255, 255, 255);
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 68px;
-    letter-spacing: 0%;
-    text-align: left;
-    margin-top: 11px;
-    margin-bottom: 20px;
-}
-
-.hero-text2{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0%;
-    text-align: left;
+.hero__bottom-text {
+    @include textStyle($FS:20px, $FW:400, $LH:24px, $COLOR:white, $CASE:capitalize, $MB:0px);
 }
 
 .hero-form{
